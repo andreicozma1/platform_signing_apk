@@ -3,7 +3,7 @@
 ### + Installation
 
 ### Platform Key Location
-> ~/android_O/android/build/make/target/product/security
+> ~/android_O/android/build/make/target/product/security   
 Files: platform.pk8 and platform.x509.pem   
 
 ## OPTION 1
