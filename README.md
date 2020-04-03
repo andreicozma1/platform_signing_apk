@@ -14,8 +14,8 @@ Files: `platform.pk8` and `platform.x509.pem`
 3. Make install.sh executable: `chmod +x install.sh`
 3. Build your Android App: `./gradlew build`
 4. Ensure the unsigned APK exists: `app/build/outputs/apk/###-release-unsigned.apk`
-5. Connect your device
-> Usage: ./install <PATH_TO_ANDROID_FOLDER>
+5. Connect your device and run:
+> ./install <PATH_TO_ANDROID_FOLDER>
 6. Second run you can just use `./install.sh` to use the previously saved path.
 
 ## OPTION 2
