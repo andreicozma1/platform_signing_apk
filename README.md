@@ -5,7 +5,7 @@
 > ~/Android_O/android/build/make/target/product/security   
 
 Files: `platform.pk8` and `platform.x509.pem`   
-
+\
 ## OPTION 1 - Use the provided script
 1. Go to your Android Studio project folder
 2. Copy `signapk.jar` and `install.sh` to the root of the project folder.
@@ -19,13 +19,13 @@ Files: `platform.pk8` and `platform.x509.pem`
 
 where `android` is the root directory of Android System Source Code
 - Second run you can just use `./install.sh` to use the previously saved path.
-
+\
 ## OPTION 2 - Deploying Platform signed application Manually
 ### 1. Generate Signed APK from Platform Keys
 > java -jar signapk.jar platform.x509.pem platform.pk8 example-app-unsigned.apk example-app-signed.apk
 ### 2. Push signed APK to the device
 > adb push signed.apk /system/app/Example/ExampleApp.apk
-
+\
 ## OPTION 3 - Deploying Platform signed application from Android Studio!
 ### 1. Download keytool-importkeypair by getfatday and make it executable
 > curl -O https://github.com/getfatday/keytool-importkeypair/blob/master/keytool-importkeypair
