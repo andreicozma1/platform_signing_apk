@@ -2,7 +2,7 @@
 # Platform Signing Android APKs + Installation Script
 
 ### Platform Key Location
-> ~/android_O/android/build/make/target/product/security   
+> ~/Android_O/android/build/make/target/product/security   
 
 Files: `platform.pk8` and `platform.x509.pem`   
 
