@@ -1,12 +1,12 @@
 ### Enable Android Remounting System Read-Write
-> adb root
-> adb disable-verity
-> adb reboot
-> adb root
-> adb remount
+> adb root  
+> adb disable-verity  
+> adb reboot  
+> adb root  
+> adb remount  
 
 ### Platform Key Location:
-~/ELO/system/android_O/android/build/make/target/product/security
+> ~/android_O/android/build/make/target/product/security
 
 ### Generate Signed APK
 > java -jar SignApk.jar platform.x509.pem platform.pk8 unsigned.apk signed.apk
