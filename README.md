@@ -1,6 +1,5 @@
 
-# Platform Signing Android APKs
-### + Installation
+# Platform Signing Android APKs + Installation Script
 
 ### Platform Key Location
 > ~/android_O/android/build/make/target/product/security   
