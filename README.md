@@ -5,7 +5,7 @@
 ### Platform Key Location
 > ~/android_O/android/build/make/target/product/security
 
-## Option 1
+## OPTION 1
 #### Deploying Platform signed application from Android Studio!
 
 ### 1. Generate Signed APK from Platform Keys
@@ -14,7 +14,7 @@
 ### 2. Push signed APK to the device
 > adb push signed.apk /system/app/Example/ExampleApp.apk
 
-## Option 2
+## OPTION 2
 #### Deploying Platform signed application from Android Studio!
 ### 1. Generate KeyStore from Key-Pair
 > keytool-importkeypair -k ~/Desktop/release.keystore -p android -pk8 platform.pk8 -cert platform.x509.pem -alias platform
