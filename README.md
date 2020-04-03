@@ -3,10 +3,10 @@
 
 ### Platform Key Location
 > ~/Android_O/android/build/make/target/product/security   
+Files: `platform.pk8` and `platform.x509.pem`
 
 ---
 
-Files: `platform.pk8` and `platform.x509.pem`
 ## OPTION 1 - Use the provided script
 1. Go to your Android Studio project folder
 2. Copy `signapk.jar` and `install.sh` to the root of the project folder.
