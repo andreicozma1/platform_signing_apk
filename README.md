@@ -1,19 +1,21 @@
-### Enable Android Remounting System Read-Write
-> adb root  
-> adb disable-verity  
-> adb reboot  
-> adb root  
-> adb remount  
 
-### Platform Key Location:
+# Platform Signing Android APKs
+### + Installation
+
+### Platform Key Location
 > ~/android_O/android/build/make/target/product/security
 
-### Generate Signed APK
+## Option 1
+### Deploying Platform signed application from Android Studio!
+
+### Generate Signed APK from Platform Keys
 > java -jar signapk.jar platform.x509.pem platform.pk8 unsigned.apk signed.apk
 
 ### Push signed APK to the device
 > adb push signed.apk /system/app/Example/ExampleApp.apk
 
+## Option 2
+### Deploying Platform signed application from Android Studio!
 ### Generate KeyStore from Key-Pair
 > keytool-importkeypair -k ~/Desktop/release.keystore -p android -pk8 platform.pk8 -cert platform.x509.pem -alias platform
 
@@ -23,3 +25,11 @@
 - Store Password: android
 - Key Alias: platform
 - Key Password: android
+
+## Extras
+### Enable Android Remounting System Read-Write
+> adb root  
+> adb disable-verity  
+> adb reboot  
+> adb root  
+> adb remount  
