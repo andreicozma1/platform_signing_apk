@@ -45,10 +45,10 @@ where `android` is the root directory of Android System Source Code
 This saved the Keystore file to the desktop as 'release.keystore'  
 #### 3. Import KeyStore into Android Studio:
 - In Android Studio -> File -> Project Structure -> Modules -> Signing Configs
-- Store File: ~/Desktop/release.keystore
-- Store Password: android
-- Key Alias: platform
-- Key Password: android
+- Store File: `~/Desktop/release.keystore`
+- Store Password: `android`
+- Key Alias: `platform`
+- Key Password: `android`
 
 ---
 
