@@ -6,20 +6,21 @@
 > ~/android_O/android/build/make/target/product/security
 
 ## Option 1
-### Deploying Platform signed application from Android Studio!
+#### Deploying Platform signed application from Android Studio!
 
-### Generate Signed APK from Platform Keys
+### 1. Generate Signed APK from Platform Keys
 > java -jar signapk.jar platform.x509.pem platform.pk8 unsigned.apk signed.apk
 
-### Push signed APK to the device
+### 2. Push signed APK to the device
 > adb push signed.apk /system/app/Example/ExampleApp.apk
 
 ## Option 2
-### Deploying Platform signed application from Android Studio!
-### Generate KeyStore from Key-Pair
+#### Deploying Platform signed application from Android Studio!
+### 1. Generate KeyStore from Key-Pair
 > keytool-importkeypair -k ~/Desktop/release.keystore -p android -pk8 platform.pk8 -cert platform.x509.pem -alias platform
+This saved the Keystore file to the desktop as 'release.keystore'  
 
-### Import KeyStore into Android Studio:
+### 2. Import KeyStore into Android Studio:
 - In Android Studio -> File -> Project Structure -> Modules -> Signing Configs
 - Store File: ~/Desktop/release.keystore
 - Store Password: android
