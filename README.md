@@ -48,7 +48,7 @@ This saved the Keystore file to the desktop as 'release.keystore'
 - Key Alias: platform
 - Key Password: android
 
-## Extras
+## EXTRAS - Unused
 ### Enable Android Remounting System Read-Write
 > adb root  
 > adb disable-verity  
