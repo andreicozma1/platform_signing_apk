@@ -7,16 +7,25 @@
 
 Files: platform.pk8 and platform.x509.pem   
 
-## OPTION 1
-#### Deploying Platform signed application from Android Studio!
+## OPTION 2
+#### Use provided script
+1. Go to your Android Studio project folder
+2. Copy `signapk.jar` and `install.sh` to the root of the project folder.
+3. Make install.sh executable: `chmod +x install.sh`
+3. Build your Android App: `./gradlew build'
+4. Ensure the unsigned APK exists: `app/build/outputs/apk/###-release-unsigned.apk`
+5. Connect your device and run ./install.sh
+
+## OPTION 2
+#### Deploying Platform signed application Manually
 
 ### 1. Generate Signed APK from Platform Keys
-> java -jar signapk.jar platform.x509.pem platform.pk8 unsigned.apk signed.apk
+> java -jar signapk.jar platform.x509.pem platform.pk8 example-app-unsigned.apk example-app-signed.apk
 
 ### 2. Push signed APK to the device
 > adb push signed.apk /system/app/Example/ExampleApp.apk
 
-## OPTION 2
+## OPTION 3
 #### Deploying Platform signed application from Android Studio!
 ### 1. Download keytool-importkeypair by getfatday and make it executable
 > curl -O https://github.com/getfatday/keytool-importkeypair/blob/master/keytool-importkeypair
