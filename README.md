@@ -7,7 +7,7 @@
 
 Files: `platform.pk8` and `platform.x509.pem`   
 
-## OPTION 2
+## OPTION 1
 #### Use provided script
 1. Go to your Android Studio project folder
 2. Copy `signapk.jar` and `install.sh` to the root of the project folder.
