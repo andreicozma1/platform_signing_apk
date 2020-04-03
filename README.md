@@ -9,8 +9,10 @@
 > ~/android_O/android/build/make/target/product/security
 
 ### Generate Signed APK
-> java -jar SignApk.jar platform.x509.pem platform.pk8 unsigned.apk signed.apk
-> adb push signed.apk /system/app/EloAthens/EloAthens.apk
+> java -jar signapk.jar platform.x509.pem platform.pk8 unsigned.apk signed.apk
+
+### Push signed APK to the device
+> adb push signed.apk /system/app/Example/ExampleApp.apk
 
 ### Generate KeyStore from Key-Pair
 > keytool-importkeypair -k ~/Desktop/release.keystore -p android -pk8 platform.pk8 -cert platform.x509.pem -alias platform
