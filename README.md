@@ -42,6 +42,7 @@ where `android` is the root directory of Android System Source Code
 > source ~/.bashrc   
 #### 2. Generate KeyStore from Key-Pair
 > keytool-importkeypair -k ~/Desktop/release.keystore -p android -pk8 platform.pk8 -cert platform.x509.pem -alias platform   
+
 This saved the Keystore file to the desktop as 'release.keystore'  
 #### 3. Import KeyStore into Android Studio:
 - In Android Studio -> File -> Project Structure -> Modules -> Signing Configs
