@@ -20,7 +20,7 @@ if [ -z "$MY_ANDROID_PATH" ]; then
       printf "\n"
       if test -f "$SIGNAPK_FILE"; then
         echo "---> SIGNING app/build/outputs/apk/app-release-unsigned.apk"
-        java -jar signapk.jar $1/build/make/target/product/security/platform.x509.pem $1/build/make/target/product/security/platform.pk8 app/build/outputs/apk/app-release-unsigned.apk signed.apk &&
+        java -jar signapk.jar $1/build/target/product/security/platform.x509.pem $1/build/target/product/security/platform.pk8 app/build/outputs/apk/app-release-unsigned.apk signed.apk &&
           echo "---> ATTEMPTING TO INSTALL SIGNED APK"
         adb install -r signed.apk
         echo "---> Removing temporary signed APK"
@@ -44,7 +44,7 @@ else
     printf "\n"
     if test -f "$SIGNAPK_FILE"; then
       echo "---> SIGNING app/build/outputs/apk/app-release-unsigned.apk"
-      java -jar signapk.jar $MY_ANDROID_PATH/build/make/target/product/security/platform.x509.pem $MY_ANDROID_PATH/build/make/target/product/security/platform.pk8 app/build/outputs/apk/app-release-unsigned.apk signed.apk &&
+      java -jar signapk.jar $MY_ANDROID_PATH/build/target/product/security/platform.x509.pem $MY_ANDROID_PATH/build/target/product/security/platform.pk8 app/build/outputs/apk/app-release-unsigned.apk signed.apk &&
         echo "---> ATTEMPTING TO INSTALL SIGNED APK"
       adb install -r signed.apk
       echo "---> Removing temporary signed APK"
