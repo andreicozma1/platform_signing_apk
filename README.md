@@ -38,7 +38,7 @@ where `android` is the root directory of Android System Source Code
 #### 2. Optional: Add this tool to your Environment PATH
 > mkdir ~/bin   
 > cp keytool-importkeypair ~/bin   
-> echo "export PATH="$HOME/bin:$PATH" > ~/.bashrc   
+> echo "export PATH="$HOME/bin:$PATH"" > ~/.bashrc   
 > source ~/.bashrc   
 #### 2. Generate KeyStore from Key-Pair
 > keytool-importkeypair -k ~/Desktop/release.keystore -p android -pk8 platform.pk8 -cert platform.x509.pem -alias platform   
