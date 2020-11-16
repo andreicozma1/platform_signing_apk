@@ -33,7 +33,7 @@ where `android` is the root directory of Android System Source Code
 
 ## OPTION 3 - Deploying Platform signed application from Android Studio!
 #### 1. Download keytool-importkeypair by getfatday and make it executable
-> curl -O https://github.com/getfatday/keytool-importkeypair/blob/master/keytool-importkeypair   
+> curl -O https://raw.githubusercontent.com/getfatday/keytool-importkeypair/master/keytool-importkeypair
 > chmod +x keytool-importkeypair   
 #### 2. Optional: Add this tool to your Environment PATH
 > mkdir ~/bin   
